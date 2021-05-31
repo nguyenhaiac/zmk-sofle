@@ -17,11 +17,11 @@
 
             bindings = <
 
-&kp N1 &kp N2   &kp N3   &kp N4    &kp N5    &kp N6                      &kp N7 &kp N8    &kp N9   &kp N0    &kp EQUAL    &kp MINUS
-&kp TAB   &kp Q  &kp W    &kp F    &kp P     &kp G                       &kp J  &kp L     &kp U     &kp Y    &kp SEMI     &kp BSLH
+&kp N1 &kp N2   &kp N3   &kp N4    &kp N5    &kp N6                        &kp N7 &kp N8    &kp N9   &kp N0    &kp EQUAL    &kp MINUS
+&kp TAB   &kp Q  &kp W    &kp F    &kp P     &kp G                         &kp J  &kp L     &kp U     &kp Y    &kp SEMI     &kp BSLH
 &mo 2     &kp A  &kp R    &kp S    &kp T     &kp D                         &kp H  &kp N     &kp E     &kp I    &kp O        &kp SQT
-&mt LSHFT ESC &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE    &none  &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH     &mt RSHFT RET
-                 &kp LCTRL &mo 3 &kp LALT &kp LGUI  &mo 1    &kp SPACE &kp LCTRL  &kp K_APP &kp RALT  &kp RGUI
+&sk LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE    &none    &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH     &mt RSHFT RET
+                 &st 4 &mo 3 &st LALT &st LGUI  &mo 1    &kp SPACE    &st LCTRL  &kp K_APP &kp RALT  &kp RGUI
 
             >;
 
@@ -48,7 +48,7 @@
             bindings = <
 
 &kp F1     &kp F2     &kp F3       &kp F4       &kp F5       &kp F6                   &kp F7    &kp F8    &kp F9   &kp F10    &kp F11  &kp F12
-&trans     &kp INS      &kp PSCRN  &kp LC(PGUP)  &kp LC(PGDN)     &trans                     &kp PG_UP &trans    &kp UP   &trans     &trans   &trans
+&trans     &kp INS      &kp PSCRN  &kp LC(PGUP)  &kp LC(PGDN) &kp DEL                 &kp PG_UP &trans    &kp UP   &trans     &trans   &trans
 &trans     &kp LALT     &kp GUI    &kp LSHFT    &kp LCTRL    &kp ESC                  &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT  &kp BSPC &kp DEL
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
                         &trans       &trans       &trans       &trans  &trans   &kp RET  &trans    &trans    &trans   &trans
@@ -65,6 +65,21 @@
 &trans     &trans       &trans       &trans       &trans       &trans                   &trans    &kp K_PP    &trans   &trans    &trans  &trans
 &trans     &trans       &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+        
+        cad_layer {
+
+            bindings = <
+
+&kp MINUS &kp EQUAL   &kp N0   &kp N9   &kp N8    &kp N7                      &kp N7 &kp N8    &kp N9   &kp N0    &kp EQUAL    &kp MINUS
+&kp TAB   &kp SEMI    &kp Y    &kp U    &kp L     &kp J                          &kp J  &kp L     &kp U     &kp Y    &kp SEMI     &kp BSLH
+&mo 2     &kp O       &kp I    &kp E    &kp N     &kp H                             &kp H  &kp N     &kp E     &kp I    &kp O        &kp SQT
+&sk LSHFT &kp FSLH  &kp DOT    &kp COMMA    &kp K     &kp M  &kp C_MUTE    &none  &kp K  &kp M     &kp COMMA &kp DOT  &kp FSLH     &mt RSHFT RET
+                 &kp LCTRL &mo 3 &kp LALT &kp LGUI  &mo 1    &kp SPACE &kp LCTRL  &kp K_APP &kp RALT  &kp RGUI
+
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
